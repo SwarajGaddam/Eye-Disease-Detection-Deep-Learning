@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container slide-up">
+
+    <h1>🩺 Diagnosis Result</h1>
+
+    <div class="prediction-box">
+        {{ prediction }}
+    </div>
+
+    <div class="image-preview">
+        <img src="{{ image_path }}">
+    </div>
+
+    <div class="info-section">
+
+        <div class="card">
+            <h3>Symptoms</h3>
+            <p>{{ info.Symptoms }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Cause</h3>
+            <p>{{ info.Cause }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Consequences</h3>
+            <p>{{ info.Consequences }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Recommended Solution</h3>
+            <p>{{ info.Solution }}</p>
+        </div>
+
+    </div>
+
+    <a href="/" class="back-btn">⬅ Analyze Another Scan</a>
+
+</div>
+
+</body>
+</html>

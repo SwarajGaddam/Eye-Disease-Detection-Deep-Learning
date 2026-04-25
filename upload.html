@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Eye Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container fade-in">
+
+    <div class="header">
+        <h1>👁 AI Eye Disease Detection</h1>
+        <p>Deep Learning Based Retinal Scan Analysis</p>
+    </div>
+
+    <div class="eye-animation">
+        <div class="pupil"></div>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Analyze Retina</button>
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
