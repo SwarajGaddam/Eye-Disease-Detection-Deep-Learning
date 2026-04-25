@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CONTAINER ===== */
+
+.container {
+    width: 95%;
+    max-width: 650px;
+    padding: 40px;
+    background: rgba(17, 24, 39, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(56,189,248,0.4);
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+
+h1 {
+    font-size: 28px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #cbd5e1;
+}
+
+/* ===== EYE ANIMATION ===== */
+
+.eye-animation {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, white 60%, #38bdf8 100%);
+    box-shadow: 0 0 30px #38bdf8;
+    position: relative;
+    overflow: hidden;
+    animation: blink 4s infinite;
+}
+
+/* Pupil */
+.pupil {
+    width: 40px;
+    height: 40px;
+    background: #0f172a;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    transition: 0.05s;
+}
+
+@keyframes blink {
+    0%, 90%, 100% { height: 120px; }
+    95% { height: 10px; }
+}
+
+/* ===== INPUT ===== */
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #1e293b;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+
+button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: none;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+/* ===== RESULT ===== */
+
+.prediction-box {
+    background: #0ea5e9;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.image-preview img {
+    width: 220px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+/* ===== CARDS ===== */
+
+.info-section {
+    display: grid;
+    gap: 15px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(56,189,248,0.4);
+}
+
+/* ===== BACK BUTTON ===== */
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #0ea5e9;
+}
+
+/* ===== ANIMATIONS ===== */
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:500px){
+    .container{
+        padding:25px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    .image-preview img{
+        width:180px;
+    }
+}
